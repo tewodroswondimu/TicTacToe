@@ -9,6 +9,15 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *a1;
+@property (weak, nonatomic) IBOutlet UIImageView *a2;
+@property (weak, nonatomic) IBOutlet UIImageView *a3;
+@property (weak, nonatomic) IBOutlet UIImageView *a4;
+@property (weak, nonatomic) IBOutlet UIImageView *a5;
+@property (weak, nonatomic) IBOutlet UIImageView *a6;
+@property (weak, nonatomic) IBOutlet UIImageView *a7;
+@property (weak, nonatomic) IBOutlet UIImageView *a8;
+@property (weak, nonatomic) IBOutlet UIImageView *a9;
 
 @end
 
