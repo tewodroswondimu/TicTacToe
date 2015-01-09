@@ -10,10 +10,11 @@
 		182E6D0A1A5F2F9700D1DC57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D091A5F2F9700D1DC57 /* main.m */; };
 		182E6D0D1A5F2F9700D1DC57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D0C1A5F2F9700D1DC57 /* AppDelegate.m */; };
 		182E6D101A5F2F9700D1DC57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D0F1A5F2F9700D1DC57 /* ViewController.m */; };
-		182E6D131A5F2F9700D1DC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E6D111A5F2F9700D1DC57 /* Main.storyboard */; };
 		182E6D151A5F2F9700D1DC57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182E6D141A5F2F9700D1DC57 /* Images.xcassets */; };
 		182E6D181A5F2F9700D1DC57 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182E6D161A5F2F9700D1DC57 /* LaunchScreen.xib */; };
 		182E6D241A5F2F9700D1DC57 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D231A5F2F9700D1DC57 /* TicTacToeTests.m */; };
+		182E6D301A5F4B0900D1DC57 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */; };
+		182E6D321A5F4F3900D1DC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E6D311A5F4F3900D1DC57 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +35,14 @@
 		182E6D0C1A5F2F9700D1DC57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		182E6D0E1A5F2F9700D1DC57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		182E6D0F1A5F2F9700D1DC57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		182E6D121A5F2F9700D1DC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182E6D141A5F2F9700D1DC57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		182E6D171A5F2F9700D1DC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		182E6D1D1A5F2F9700D1DC57 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182E6D221A5F2F9700D1DC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182E6D231A5F2F9700D1DC57 /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		182E6D2E1A5F4B0900D1DC57 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		182E6D311A5F4F3900D1DC57 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				182E6D0B1A5F2F9700D1DC57 /* AppDelegate.h */,
 				182E6D0C1A5F2F9700D1DC57 /* AppDelegate.m */,
+				182E6D311A5F4F3900D1DC57 /* Main.storyboard */,
+				182E6D2E1A5F4B0900D1DC57 /* RootViewController.h */,
+				182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */,
 				182E6D0E1A5F2F9700D1DC57 /* ViewController.h */,
 				182E6D0F1A5F2F9700D1DC57 /* ViewController.m */,
-				182E6D111A5F2F9700D1DC57 /* Main.storyboard */,
 				182E6D141A5F2F9700D1DC57 /* Images.xcassets */,
 				182E6D161A5F2F9700D1DC57 /* LaunchScreen.xib */,
 				182E6D071A5F2F9700D1DC57 /* Supporting Files */,
@@ -199,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182E6D131A5F2F9700D1DC57 /* Main.storyboard in Resources */,
+				182E6D321A5F4F3900D1DC57 /* Main.storyboard in Resources */,
 				182E6D181A5F2F9700D1DC57 /* LaunchScreen.xib in Resources */,
 				182E6D151A5F2F9700D1DC57 /* Images.xcassets in Resources */,
 			);
@@ -221,6 +226,7 @@
 			files = (
 				182E6D101A5F2F9700D1DC57 /* ViewController.m in Sources */,
 				182E6D0D1A5F2F9700D1DC57 /* AppDelegate.m in Sources */,
+				182E6D301A5F4B0900D1DC57 /* RootViewController.m in Sources */,
 				182E6D0A1A5F2F9700D1DC57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +250,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		182E6D111A5F2F9700D1DC57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				182E6D121A5F2F9700D1DC57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		182E6D161A5F2F9700D1DC57 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

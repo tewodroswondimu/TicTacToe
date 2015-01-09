@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  TicTacToe
 //
 //  Created by Tewodros Wondimu on 1/8/15.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-// Player Type is either X (true) or O (false)
-@property BOOL playerType;
+@interface RootViewController : UIViewController
 
 @end
-
