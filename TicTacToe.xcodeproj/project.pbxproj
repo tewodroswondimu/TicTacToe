@@ -15,6 +15,7 @@
 		182E6D241A5F2F9700D1DC57 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D231A5F2F9700D1DC57 /* TicTacToeTests.m */; };
 		182E6D301A5F4B0900D1DC57 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */; };
 		182E6D321A5F4F3900D1DC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E6D311A5F4F3900D1DC57 /* Main.storyboard */; };
+		18E4A2051A637A22003BF7F8 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4A2041A637A22003BF7F8 /* HelpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		182E6D2E1A5F4B0900D1DC57 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		182E6D311A5F4F3900D1DC57 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18E4A2031A637A22003BF7F8 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		18E4A2041A637A22003BF7F8 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				182E6D2F1A5F4B0900D1DC57 /* RootViewController.m */,
 				182E6D0E1A5F2F9700D1DC57 /* ViewController.h */,
 				182E6D0F1A5F2F9700D1DC57 /* ViewController.m */,
+				18E4A2031A637A22003BF7F8 /* HelpViewController.h */,
+				18E4A2041A637A22003BF7F8 /* HelpViewController.m */,
 				182E6D141A5F2F9700D1DC57 /* Images.xcassets */,
 				182E6D161A5F2F9700D1DC57 /* LaunchScreen.xib */,
 				182E6D071A5F2F9700D1DC57 /* Supporting Files */,
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E4A2051A637A22003BF7F8 /* HelpViewController.m in Sources */,
 				182E6D101A5F2F9700D1DC57 /* ViewController.m in Sources */,
 				182E6D0D1A5F2F9700D1DC57 /* AppDelegate.m in Sources */,
 				182E6D301A5F4B0900D1DC57 /* RootViewController.m in Sources */,

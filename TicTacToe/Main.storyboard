@@ -207,7 +207,13 @@
                             <outletCollection property="gestureRecognizers" destination="5KN-Q5-ZvD" appends="YES" id="wy7-ly-2gv"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="mBe-gT-RYG"/>
+                    <navigationItem key="navigationItem" id="mBe-gT-RYG">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="uzB-zy-teT">
+                            <connections>
+                                <segue destination="W1d-Q0-Aje" kind="modal" id="5gr-IZ-Ozx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="a1" destination="0vF-q3-TEO" id="Mtx-rb-xUS"/>
                         <outlet property="a2" destination="hbr-64-kEN" id="Hq2-ga-DwK"/>
@@ -239,6 +245,68 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="685" y="284"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="oXj-5U-jP4">
+            <objects>
+                <viewController id="W1d-Q0-Aje" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HAL-l3-nGH"/>
+                        <viewControllerLayoutGuide type="bottom" id="bJA-6g-Z54"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAS-si-9KQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70c-n3-Hvc">
+                                <rect key="frame" x="0.0" y="10" width="320" height="558"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b0R-fe-bpu">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="KAI-hu-PJG"/>
+                                    <constraint firstAttribute="width" constant="37" id="Ru3-3R-5NO"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-bO-aUt">
+                                <rect key="frame" x="239" y="20" width="65" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HOa-2A-jAk"/>
+                                    <constraint firstAttribute="width" constant="65" id="ngm-5b-hLb"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseButtonTapped:" destination="W1d-Q0-Aje" eventType="touchUpInside" id="qSr-Qn-5mH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJA-6g-Z54" firstAttribute="top" secondItem="70c-n3-Hvc" secondAttribute="bottom" id="Aqx-9k-6Sl"/>
+                            <constraint firstItem="70c-n3-Hvc" firstAttribute="leading" secondItem="hAS-si-9KQ" secondAttribute="leadingMargin" constant="-16" id="CQd-B1-G7a"/>
+                            <constraint firstItem="70c-n3-Hvc" firstAttribute="top" secondItem="HAL-l3-nGH" secondAttribute="bottom" constant="10" id="Ez1-Si-CS2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="70c-n3-Hvc" secondAttribute="trailing" constant="-16" id="M4e-qf-6It"/>
+                            <constraint firstAttribute="centerY" secondItem="b0R-fe-bpu" secondAttribute="centerY" id="WV9-jK-ltM"/>
+                            <constraint firstAttribute="centerX" secondItem="70c-n3-Hvc" secondAttribute="centerX" id="Xsc-dE-UbS"/>
+                            <constraint firstAttribute="centerX" secondItem="b0R-fe-bpu" secondAttribute="centerX" id="n5P-o7-ikc"/>
+                            <constraint firstItem="EAr-bO-aUt" firstAttribute="trailing" secondItem="hAS-si-9KQ" secondAttribute="trailingMargin" id="qt3-XL-A8B"/>
+                            <constraint firstItem="EAr-bO-aUt" firstAttribute="top" secondItem="HAL-l3-nGH" secondAttribute="bottom" constant="20" id="zQY-vl-Xs3"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="spinner" destination="b0R-fe-bpu" id="lxx-xD-Z1M"/>
+                        <outlet property="webView" destination="70c-n3-Hvc" id="JAA-Th-BjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDd-p3-DSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rZl-K3-E3C">
