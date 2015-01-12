@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *xDragableButton;
 @property (weak, nonatomic) IBOutlet UIImageView *oDragableButton;
 @property (weak, nonatomic) IBOutlet UIView *imageViewContainer;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItemCountdown;
 
 @property NSMutableSet *xMoves;
 @property NSMutableSet *oMoves;
@@ -41,6 +42,9 @@
 @property NSArray *allConditions;
 
 @property NSString *winner;
+@property NSTimer *gameTimer;
+@property NSTimer *countDownTimer;
+@property int timer;
 
 @property UIAlertView *alertView;
 
@@ -54,7 +58,26 @@
     self.xMoves = [[NSMutableSet alloc] init];
     self.oMoves = [[NSMutableSet alloc] init];
     self.alertView.delegate = self;
+
+    // Initialize the timer
+    self.timer = 4;
+    self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(gameTimer:) userInfo:nil repeats:YES];
+    self.countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownTimer:) userInfo:nil repeats:YES];
+
     [self currentPlayer];
+}
+
+- (void)gameTimer:(NSTimer *)timer
+{
+    [self nextPlayer];
+}
+
+- (void)countDownTimer:(NSTimer *)timer
+{
+    self.navigationItemCountdown.title = [NSString stringWithFormat:@"Player has %i Seconds", self.timer];
+    if (timer >= 0) {
+        self.timer -= 1;
+    }
 }
 
 // When the imageView is tapped, change the background image to show an 'X' or an 'O'
@@ -84,7 +107,7 @@
 
             // Change the image of the slot that was pressed to X
             imageViewTouched.image = [UIImage imageNamed:@"x.png"];
-            [self nextPlayer];
+            [self.gameTimer fire];
         }
         else
         {
@@ -100,7 +123,7 @@
 
             // Change the image of the slot that was pressed to O
             imageViewTouched.image = [UIImage imageNamed:@"o.png"];
-            [self nextPlayer];
+            [self.gameTimer fire];
         }
     }
 }
@@ -162,6 +185,14 @@
 // Change the player type to next player
 - (void)nextPlayer
 {
+    // Reset the timer to 5 seconds
+    self.timer = 5;
+
+    // Resets the timer
+    [self.gameTimer invalidate];
+    self.gameTimer = nil;
+    self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(gameTimer:) userInfo:nil repeats:YES];
+
     self.playerType = !self.playerType;
     if (self.playerType) {
         self.whichPlayerLabel.text = @"It's X turn";

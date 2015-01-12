@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="215" y="284"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -207,7 +207,7 @@
                             <outletCollection property="gestureRecognizers" destination="5KN-Q5-ZvD" appends="YES" id="wy7-ly-2gv"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="mBe-gT-RYG">
+                    <navigationItem key="navigationItem" title="Timer" id="mBe-gT-RYG">
                         <barButtonItem key="rightBarButtonItem" title="Help" id="uzB-zy-teT">
                             <connections>
                                 <segue destination="W1d-Q0-Aje" kind="modal" id="5gr-IZ-Ozx"/>
@@ -225,6 +225,7 @@
                         <outlet property="c2" destination="CCz-M4-e5B" id="23M-QM-NLN"/>
                         <outlet property="c3" destination="oWZ-7A-Nh7" id="gV6-3C-RdH"/>
                         <outlet property="imageViewContainer" destination="gHb-GG-QbP" id="rAE-Pb-uXk"/>
+                        <outlet property="navigationItemCountdown" destination="mBe-gT-RYG" id="L73-VU-l2F"/>
                         <outlet property="oDragableButton" destination="gdY-iN-sq5" id="eVb-BH-lCy"/>
                         <outlet property="whichPlayerLabel" destination="rcg-nt-zRn" id="adG-Mq-L1g"/>
                         <outlet property="xDragableButton" destination="zqz-oE-ISN" id="24p-kO-fWS"/>
