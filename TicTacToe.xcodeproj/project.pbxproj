@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					182E6D031A5F2F9700D1DC57 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = B336RKK32A;
 					};
 					182E6D1C1A5F2F9700D1DC57 = {
 						CreatedOnToolsVersion = 6.2;
@@ -341,9 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "163cb97d-c0a0-495b-a42d-4db61201c748";
 			};
 			name = Debug;
 		};
@@ -351,9 +356,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "163cb97d-c0a0-495b-a42d-4db61201c748";
 			};
 			name = Release;
 		};
@@ -410,6 +419,7 @@
 				182E6D291A5F2F9700D1DC57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182E6D2A1A5F2F9700D1DC57 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +428,7 @@
 				182E6D2C1A5F2F9700D1DC57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
