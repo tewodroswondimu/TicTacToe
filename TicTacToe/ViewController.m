@@ -131,11 +131,22 @@
 // Shows an alert proclaiming victory for that player
 - (void)showWinnerWithWinner:(NSString *)winner
 {
-    NSString *title = [NSString stringWithFormat:@"%@ is the Winner", winner];
+    NSString *title;
+    if ([winner isEqualToString:@"Tie"]) {
+        title = [NSString stringWithFormat:@"The game was a tie!"];
+    }
+    else
+    {
+        title = [NSString stringWithFormat:@"%@ is the Winner", winner];
+    }
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:@"Do you want to reset this game?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
 
     [alert addButtonWithTitle:@"New Game"];
     [alert show];
+
+    self.navigationItem.title = @"Gave Over";
+    [self stopGameTimer];
+    [self stopCountDownTimer];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -179,7 +190,23 @@
             }
         }
     }
+
+    if (self.oMoves.count + self.xMoves.count == 9) {
+        return @"Tie";
+    }
     return nil;
+}
+
+- (void)stopGameTimer
+{
+    [self.gameTimer invalidate];
+    self.gameTimer = nil;
+}
+
+- (void)stopCountDownTimer
+{
+    [self.countDownTimer invalidate];
+    self.countDownTimer = nil;
 }
 
 // Change the player type to next player
@@ -189,8 +216,7 @@
     self.timer = 5;
 
     // Resets the timer
-    [self.gameTimer invalidate];
-    self.gameTimer = nil;
+    [self stopGameTimer];
     self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(gameTimer:) userInfo:nil repeats:YES];
 
     self.playerType = !self.playerType;
